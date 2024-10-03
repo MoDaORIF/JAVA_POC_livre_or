@@ -1,0 +1,11 @@
+services:
+  mariadb:
+    image: 'mariadb:latest'
+    container_name: 'POC-mariadb'
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_DATABASE=mydatabase
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=mypassword
+    ports:
+      - '3307:3306'
